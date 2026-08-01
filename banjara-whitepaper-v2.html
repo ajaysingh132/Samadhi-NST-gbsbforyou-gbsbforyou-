@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>श्वेत पत्र v2: Nomadic Tribe दर्जा और NST स्वतंत्र कानून — बंजारा/DNT</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --saffron: #D4560A;
+    --deep: #0F1A14;
+    --parchment: #F5F0E8;
+    --gold: #B8902A;
+    --green: #1E5C3A;
+    --rule: #D0C8B4;
+    --ink: #1C1208;
+    --card-bg: #FFFFFF;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 16.5px;
+    line-height: 1.9;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    background: var(--deep);
+    color: #EDE8DC;
+    padding: 80px 56px 60px;
+    position: relative;
+  }
+  .cover-stripe {
+    position: absolute; top:0; left:0; right:0; height:6px;
+    background: linear-gradient(90deg,#FF6B00 0%,#D4A017 40%,#1E5C3A 100%);
+  }
+  .cover-eyebrow {
+    font-family:'Inter',sans-serif; font-size:10px; font-weight:700;
+    letter-spacing:4px; text-transform:uppercase; color:#B8902A;
+    margin-bottom:28px;
+  }
+  .cover h1 {
+    font-size: clamp(26px,4.5vw,46px);
+    font-weight:400; line-height:1.3; color:#EDE8DC;
+    margin-bottom:20px;
+  }
+  .cover h1 em { color:#FF7A2F; font-style:normal; }
+  .cover-tagline {
+    font-family:'Inter',sans-serif; font-size:13px;
+    color:#7A6A50; line-height:1.7; max-width:600px;
+  }
+  .cover-meta {
+    margin-top:52px; padding-top:24px;
+    border-top:1px solid #2A2018;
+    display:flex; gap:48px; flex-wrap:wrap;
+  }
+  .cover-meta div { font-family:'Inter',sans-serif; font-size:11px; color:#5A4A32; }
+  .cover-meta strong { display:block; color:#B8902A; font-size:12px; margin-bottom:3px; }
+
+  /* ── EXEC SUMMARY ── */
+  .exec {
+    background: var(--saffron);
+    color:#fff; padding:52px 56px;
+  }
+  .exec .label {
+    font-family:'Inter',sans-serif; font-size:10px; font-weight:700;
+    letter-spacing:3px; text-transform:uppercase; opacity:.7; margin-bottom:18px;
+  }
+  .exec p { font-size:17.5px; line-height:1.95; }
+
+  /* ── MAIN WRAP ── */
+  .wrap { max-width:880px; margin:0 auto; padding:0 36px; }
+
+  /* ── SECTION ── */
+  .sec { padding:68px 0; border-bottom:1px solid var(--rule); }
+  .sec:last-child { border-bottom:none; }
+  .sec-label {
+    font-family:'Inter',sans-serif; font-size:9px; font-weight:700;
+    letter-spacing:4px; text-transform:uppercase; color:var(--saffron);
+    margin-bottom:10px;
+  }
+  h2 { font-size:clamp(20px,3vw,30px); font-weight:400; color:var(--deep); margin-bottom:28px; line-height:1.4; }
+  h3 {
+    font-size:17px; font-weight:400; color:var(--green);
+    border-left:3px solid var(--gold); padding-left:16px;
+    margin:36px 0 14px;
+  }
+  p { margin-bottom:18px; }
+
+  /* ── PULL QUOTE ── */
+  .pq {
+    background:var(--card-bg); border-left:4px solid var(--saffron);
+    padding:24px 28px; margin:32px 0; font-size:18.5px; line-height:1.85;
+    box-shadow:0 2px 16px rgba(0,0,0,.07);
+  }
+  .pq small { display:block; margin-top:10px; font-family:'Inter',sans-serif; font-size:12px; color:#888; }
+
+  /* ── STATS ROW ── */
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:20px; margin:32px 0; }
+  .stat { background:var(--card-bg); padding:22px; border-top:3px solid var(--gold); }
+  .stat .n { font-family:'Inter',sans-serif; font-size:36px; font-weight:700; color:var(--saffron); line-height:1; }
+  .stat p { font-family:'Inter',sans-serif; font-size:12px; color:#6B5030; margin:6px 0 0; line-height:1.5; }
+
+  /* ── TIMELINE ── */
+  .tl { margin:32px 0; }
+  .tl-row { display:grid; grid-template-columns:90px 1fr; gap:20px; padding-bottom:22px; margin-bottom:22px; border-bottom:1px dashed var(--rule); }
+  .tl-row:last-child { border-bottom:none; }
+  .tl-y { font-family:'Inter',sans-serif; font-weight:700; font-size:14px; color:var(--saffron); padding-top:2px; }
+  .tl-t { font-size:15px; }
+
+  /* ── COMPARE TABLE ── */
+  .ct { width:100%; border-collapse:collapse; margin:28px 0; font-size:14.5px; }
+  .ct th { background:var(--deep); color:var(--gold); padding:13px 16px; text-align:left; font-family:'Inter',sans-serif; font-size:11px; letter-spacing:1px; font-weight:600; }
+  .ct td { padding:13px 16px; border-bottom:1px solid var(--rule); vertical-align:top; }
+  .ct tr:nth-child(even) td { background:var(--card-bg); }
+  .bad { color:#B91C1C; }
+  .good { color:var(--green); font-weight:600; }
+
+  /* ── LAW FRAMEWORK BOX ── */
+  .law-box {
+    background: var(--deep); color:#EDE8DC;
+    padding:40px 44px; margin:36px 0;
+  }
+  .law-box h3 { border-color:#B8902A; color:#D4A44C; margin-top:0; }
+  .law-box p { font-size:15px; color:#C0B090; }
+  .law-clause {
+    background:rgba(255,255,255,.05);
+    border-left:3px solid var(--saffron);
+    padding:16px 20px; margin:16px 0; font-size:15px; color:#EDE8DC;
+  }
+  .law-clause strong { color:#FF9A50; }
+
+  /* ── DEMAND LIST ── */
+  .dl { list-style:none; margin:28px 0; }
+  .dl li { display:flex; gap:16px; margin-bottom:22px; align-items:flex-start; }
+  .dl-num {
+    background:var(--saffron); color:#fff;
+    font-family:'Inter',sans-serif; font-weight:700; font-size:12px;
+    min-width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    flex-shrink:0; margin-top:4px;
+  }
+
+  /* ── INTL MODEL ── */
+  .model-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:18px; margin:28px 0; }
+  .model-card { background:var(--card-bg); padding:22px; border-top:2px solid var(--green); }
+  .model-card .country { font-family:'Inter',sans-serif; font-size:11px; font-weight:700; letter-spacing:2px; color:var(--green); margin-bottom:8px; }
+  .model-card p { font-family:'Inter',sans-serif; font-size:13px; color:#4A3A20; margin:0; line-height:1.6; }
+
+  /* ── SOURCE NOTE ── */
+  .src { background:#ECE6DA; padding:14px 18px; font-family:'Inter',sans-serif; font-size:11.5px; color:#6B5030; margin:24px 0; }
+  .src strong { color:var(--ink); }
+
+  /* ── FOOTER ── */
+  footer { background:var(--deep); color:#44382A; padding:44px 56px; font-family:'Inter',sans-serif; font-size:11.5px; line-height:1.9; }
+  footer strong { color:var(--gold); }
+
+  @media(max-width:600px){
+    .cover,.exec { padding:44px 22px; }
+    .wrap { padding:0 18px; }
+    .tl-row { grid-template-columns:70px 1fr; }
+    .cover-meta { gap:20px; }
+    .law-box { padding:28px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover">
+  <div class="cover-stripe"></div>
+  <div class="cover-eyebrow">श्वेत पत्र — GBSBFORYOU Publications · NST Framework · संस्करण 2.0</div>
+  <h1>बंजारा/DNT:<br><em>Nomadic Tribe दर्जा</em><br>और स्वतंत्र<br>Nomadic Sahakari Tantra कानून</h1>
+  <div class="cover-tagline">
+    यह दस्तावेज़ सिद्ध करता है कि बंजारा/DNT समुदाय कभी भारतीय जाति-वर्ण व्यवस्था का हिस्सा नहीं था।
+    इसलिए उसे "अनुसूचित जाति/जनजाति" नहीं — <strong style="color:#D4A44C;">Nomadic Tribe (NT)</strong> का स्वायत्त संवैधानिक दर्जा
+    और अपना स्वतंत्र <strong style="color:#D4A44C;">Nomadic Sahakari Tantra (NST) कानून</strong> चाहिए।
+  </div>
+  <div class="cover-meta">
+    <div><strong>प्रस्तुतकर्ता</strong>GBSBFORYOU Publications, भोपाल</div>
+    <div><strong>Framework</strong>NST — Nomadic Sahakari Tantra</div>
+    <div><strong>अंतर्राष्ट्रीय आधार</strong>UNDRIP 2007 · ILO 169</div>
+    <div><strong>वर्ष</strong>2026</div>
+  </div>
+</div>
+
+<!-- EXEC SUMMARY -->
+<div class="exec">
+  <div class="label">कार्यकारी सारांश</div>
+  <p>
+    बंजारा/DNT समुदाय मनुस्मृति की चतुर्वर्ण व्यवस्था से बाहर, स्वतंत्र गोत्र-शासन से चलने वाला,
+    अपनी भाषा (गोर-बोली), अपने न्याय-तंत्र और अपनी आर्थिक व्यवस्था वाला एक संप्रभु घुमंतू समुदाय था।
+    1871 में ब्रिटिश औपनिवेशिक सत्ता ने इस स्वतंत्रता को "अपराध" घोषित किया।
+    1952 में "Denotified" तो किया गया — पर SC/ST/OBC की औपनिवेशिक श्रेणियों में ठूंस दिया गया।
+    यह श्वेत पत्र मांग करता है: बंजारा/DNT को <strong>Nomadic Tribe (NT)</strong> का
+    अलग संवैधानिक दर्जा दिया जाए और उनके लिए
+    <strong>Nomadic Sahakari Tantra (NST)</strong> — एक स्वतंत्र सहकारी शासन-कानून — बनाया जाए।
+  </p>
+</div>
+
+<div class="wrap">
+
+  <!-- ── खण्ड १: पहचान ── -->
+  <div class="sec">
+    <div class="sec-label">खण्ड १ · ऐतिहासिक पहचान</div>
+    <h2>बंजारा — जाति नहीं, एक स्वतंत्र घुमंतू सभ्यता</h2>
+
+    <div class="stats">
+      <div class="stat"><div class="n">3000+</div><p>वर्षों का ऐतिहासिक अस्तित्व — हड़प्पा काल से संदर्भ मिलते हैं</p></div>
+      <div class="stat"><div class="n">0</div><p>मनुस्मृति की चतुर्वर्ण श्रेणियों में बंजारा का स्थान — यह उस व्यवस्था से बाहर था</p></div>
+      <div class="stat"><div class="n">191</div><p>समुदाय CTA 1871 के तहत "जन्मजात अपराधी" घोषित — बंजारा सबसे बड़ा</p></div>
+      <div class="stat"><div class="n">1%</div><p>भारत की जनसंख्या जो 1947 में "Criminal Tribe" का दाग लिए थी</p></div>
+    </div>
+
+    <div class="pq">
+      "बंजारा मनुस्मृति की किसी भी चतुर्वर्ण श्रेणी में नहीं आता। यह एक स्वतंत्र गोत्र-आधारित समुदाय है — जाति नहीं।"
+      <small>— IJRAR शोध पत्र 2021 | "Banjara does not fall in any categories of Manu Smriti Chaturvarna"</small>
+    </div>
+
+    <h3>स्वतंत्र आंतरिक शासन-व्यवस्था</h3>
+    <p>बंजारा समुदाय की अपनी <strong>नायक/नाईक शासन-व्यवस्था</strong> थी। गोत्र-पंचायत न्याय करती थी। <strong>भूटिया गोत्र</strong> ब्राह्मण कार्य स्वयं करता था — बाहरी ब्राह्मण की आवश्यकता ही नहीं थी। <strong>थांडा (Thanda)</strong> उनकी स्वायत्त बस्ती-व्यवस्था थी। <strong>गोर-बोली</strong> उनकी स्वतंत्र भाषा थी।</p>
+
+    <h3>राष्ट्रीय अर्थव्यवस्था में स्वतंत्र भूमिका</h3>
+    <p>मुगल और मराठा काल में बंजारा समुदाय उपमहाद्वीप के <strong>आपूर्ति-तंत्र की रीढ़</strong> था — अनाज, हथियार, आवश्यक वस्तुओं का परिवहन। यह किसी की "नीची जाति" नहीं थी — एक स्वतंत्र आर्थिक शक्ति थी जो किसी राजसत्ता के अधीन नहीं थी।</p>
+  </div>
+
+  <!-- ── खण्ड २: औपनिवेशिक अपराध ── -->
+  <div class="sec">
+    <div class="sec-label">खण्ड २ · औपनिवेशिक अपराध</div>
+    <h2>Criminal Tribes Act 1871 — स्वतंत्रता को अपराध बनाया</h2>
+
+    <div class="pq">
+      "अंग्रेजों ने 1857 के विद्रोह के बाद उन सभी समुदायों को 'अपराधी' घोषित किया जो उनके नियंत्रण से बाहर थे। बंजारा इसीलिए निशाना बना — क्योंकि वह <em>स्वतंत्र</em> था।"
+    </div>
+
+    <div class="tl">
+      <div class="tl-row"><div class="tl-y">1857</div><div class="tl-t">विद्रोह के बाद अंग्रेज सरकार ने घुमंतू और असंगठित समुदायों को सबसे बड़ा खतरा माना।</div></div>
+      <div class="tl-row"><div class="tl-y">1871</div><div class="tl-t">Criminal Tribes Act — बिना किसी व्यक्तिगत अपराध के पूरे समुदायों को "जन्मजात अपराधी" घोषित। थांडाओं में जबरदस्ती बंद।</div></div>
+      <div class="tl-row"><div class="tl-y">1881</div><div class="tl-t">ब्रिटिश जनगणना में बंजारा "Criminal Tribe" की सूची में दर्ज — औपनिवेशिक वर्गीकरण का आधार बना।</div></div>
+      <div class="tl-row"><div class="tl-y">1935</div><div class="tl-t">Government of India Act — SC/ST सूचियां इसी औपनिवेशिक वर्गीकरण पर आधारित बनीं।</div></div>
+      <div class="tl-row"><div class="tl-y">1950</div><div class="tl-t">भारत का संविधान — वही औपनिवेशिक SC/ST सूचियां अपना लीं। बंजारा को अलग-अलग राज्यों में SC/ST/OBC में बांट दिया।</div></div>
+      <div class="tl-row"><div class="tl-y">1952</div><div class="tl-t">"Denotified" घोषित — कानूनी दाग हटा, सामाजिक कलंक नहीं हटा। NT दर्जा नहीं मिला।</div></div>
+      <div class="tl-row"><div class="tl-y">आज</div><div class="tl-t">DNT समुदाय अभी भी पुलिस निगरानी, सामाजिक भेदभाव और आर्थिक हाशिये पर। औपनिवेशिक संरचना जारी है।</div></div>
+    </div>
+
+    <div class="src"><strong>स्रोत:</strong> Countercurrents 2024, Forward Press 2015, ResearchGate — "Constructing the Criminal Tribe in Colonial India" 2010, Tandfonline 2023, ipleaders.in 2023, Springer Academic Press.</div>
+  </div>
+
+  <!-- ── खण्ड ३: संवैधानिक विरोधाभास ── -->
+  <div class="sec">
+    <div class="sec-label">खण्ड ३ · संवैधानिक विरोधाभास</div>
+    <h2>आरक्षण — समाधान नहीं, औपनिवेशिक वर्गीकरण की निरंतरता</h2>
+
+    <table class="ct">
+      <tr><th>विषय</th><th>औपनिवेशिक / वर्तमान दावा</th><th>ऐतिहासिक सत्य</th></tr>
+      <tr><td>सामाजिक दर्जा</td><td class="bad">SC/ST/OBC — "पिछड़ा"</td><td class="good">वर्ण व्यवस्था से बाहर — स्वतंत्र घुमंतू समुदाय</td></tr>
+      <tr><td>आपराधिक पहचान</td><td class="bad">1871: जन्मजात अपराधी</td><td class="good">स्वतंत्र व्यापारी व आपूर्ति-तंत्र — दंड था स्वतंत्रता का</td></tr>
+      <tr><td>धार्मिक तंत्र</td><td class="bad">बाहरी ब्राह्मण-आश्रित माना गया</td><td class="good">भूटिया गोत्र स्वयं ब्राह्मण कार्य करता था</td></tr>
+      <tr><td>शासन-व्यवस्था</td><td class="bad">ग्राम पंचायत के अधीन</td><td class="good">स्वतंत्र नायक-पंचायत और गोत्र-सभा</td></tr>
+      <tr><td>न्याय का रास्ता</td><td class="bad">आरक्षण (SC/ST कोटा) मांगो</td><td class="good">NT दर्जा + NST स्वतंत्र कानून</td></tr>
+      <tr><td>भाषा</td><td class="bad">कोई संवैधानिक मान्यता नहीं</td><td class="good">गोर-बोली — स्वतंत्र भाषाई परंपरा, 8वीं अनुसूची में स्थान मांगती है</td></tr>
+    </table>
+
+    <div class="pq">
+      आरक्षण मांगना = उस औपनिवेशिक वर्गीकरण को स्वीकार करना जो कहता था "तुम नीचे हो।"<br>
+      <strong>बंजारा कभी नीचे था ही नहीं — वह बाहर था। स्वतंत्र था।</strong>
+    </div>
+  </div>
+
+  <!-- ── खण्ड ४: अंतर्राष्ट्रीय मॉडल ── -->
+  <div class="sec">
+    <div class="sec-label">खण्ड ४ · अंतर्राष्ट्रीय मॉडल</div>
+    <h2>Nomadic Tribe स्वायत्तता — विश्व के सफल उदाहरण</h2>
+
+    <p>घुमंतू और स्वदेशी समुदायों को स्वायत्त दर्जा देने के अंतर्राष्ट्रीय उदाहरण NST framework का आधार बनते हैं:</p>
+
+    <div class="model-grid">
+      <div class="model-card">
+        <div class="country">SAMI — नॉर्वे / फिनलैंड / स्वीडन</div>
+        <p><strong>Sami Parliament</strong> — घुमंतू खानाबदोश समुदाय के लिए अलग संसद। भाषा, संस्कृति, भूमि अधिकार पर स्वायत्त निर्णय। <em>Sameby</em> — सहकारी चरागाह-व्यवस्था को कानूनी दर्जा।</p>
+      </div>
+      <div class="model-card">
+        <div class="country">MĀORI — न्यूजीलैंड</div>
+        <p>Treaty of Waitangi के आधार पर स्वायत्त शासन। अलग न्यायिक-व्यवस्था, भाषाई अधिकार, भूमि संप्रभुता।</p>
+      </div>
+      <div class="model-card">
+        <div class="country">NATIVE AMERICAN — USA</div>
+        <p>"Domestic Dependent Nations" — संघीय ढांचे के भीतर जनजातीय संप्रभुता। अपने कानून, अपनी अदालत, अपना कर-तंत्र।</p>
+      </div>
+      <div class="model-card">
+        <div class="country">INDIA — 6th Schedule</div>
+        <p>पूर्वोत्तर की जनजातियों के लिए <strong>Autonomous District Council</strong> — विधायी, न्यायिक और प्रशासनिक अधिकार। यही मॉडल DNT के लिए मांगा जाए।</p>
+      </div>
+    </div>
+
+    <div class="pq">
+      "Indigenous Peoples में hunter-gatherers, nomads, pastoralists सभी शामिल हैं।"
+      <small>— UN Permanent Forum on Indigenous Issues, UNDRIP 2007</small>
+    </div>
+
+    <div class="src"><strong>स्रोत:</strong> Sami Parliament of Finland (samediggi.fi), Library of Congress — Sameby Legal Status 2021, Debates Indígenas — Sami Governance 2026, UN DESA — UNDRIP, IWGIA India Report.</div>
+  </div>
+
+  <!-- ── खण्ड ५: NST कानून का ढांचा ── -->
+  <div class="sec">
+    <div class="sec-label">खण्ड ५ · NST कानून ढांचा</div>
+    <h2>Nomadic Sahakari Tantra — स्वतंत्र कानून का प्रस्तावित ढांचा</h2>
+
+    <p>NST एक स्वतंत्र घुमंतू सहकारी शासन-कानून है जो बंजारा/DNT की परंपरागत व्यवस्था को आधुनिक संवैधानिक ढांचे से जोड़ता है। यह Sami Parliament मॉडल और भारत के 6th Schedule से प्रेरित है — परंतु बंजारा समुदाय की विशेष परंपराओं पर आधारित है।</p>
+
+    <div class="law-box">
+      <h3>प्रस्तावित NST अधिनियम — मुख्य धाराएं</h3>
+
+      <div class="law-clause">
+        <strong>धारा १ — परिभाषा और दर्जा:</strong> बंजारा/DNT समुदाय को "Nomadic Tribe" (NT) के रूप में एक अलग संवैधानिक श्रेणी में मान्यता। यह SC/ST/OBC से अलग और उच्चतर स्वायत्त दर्जा होगा।
+      </div>
+
+      <div class="law-clause">
+        <strong>धारा २ — NST सभा (Nomadic Sahakari Sabha):</strong> प्रत्येक राज्य में बंजारा/DNT की निर्वाचित NST सभा — Sami Parliament की तर्ज पर। यह सभा भाषा, शिक्षा, संस्कृति, आजीविका और आंतरिक न्याय पर निर्णय लेगी।
+      </div>
+
+      <div class="law-clause">
+        <strong>धारा ३ — नायक-पंचायत को कानूनी दर्जा:</strong> गोत्र-पंचायत और नायक-व्यवस्था को ग्राम पंचायत के समकक्ष मान्यता। थांडा को स्वायत्त प्रशासनिक इकाई घोषित किया जाए।
+      </div>
+
+      <div class="law-clause">
+        <strong>धारा ४ — घुमंतू आजीविका अधिकार:</strong> पारंपरिक व्यापार-मार्गों, चरागाह-क्षेत्रों और आजीविका-क्षेत्रों पर NT समुदाय का पूर्व-अधिकार। किसी भी परियोजना से पहले NST सभा की "Free, Prior and Informed Consent (FPIC)" अनिवार्य।
+      </div>
+
+      <div class="law-clause">
+        <strong>धारा ५ — गोर-बोली का भाषाई अधिकार:</strong> गोर-बोली को 8वीं अनुसूची में शामिल करना और प्राथमिक शिक्षा में मातृभाषा-माध्यम अनिवार्य।
+      </div>
+
+      <div class="law-clause">
+        <strong>धारा ६ — CTA 1871 का ऐतिहासिक निवारण:</strong> संसद में औपचारिक प्रस्ताव — जो स्वीकार करे कि CTA 1871 एक अन्यायपूर्ण औपनिवेशिक कानून था। NT समुदायों को ऐतिहासिक क्षतिपूर्ति और पुनर्वास का अधिकार।
+      </div>
+
+      <div class="law-clause">
+        <strong>धारा ७ — राष्ट्रीय NT आयोग:</strong> एक स्वतंत्र "National Nomadic Tribes Commission" जो NHRC और NCSC/NCST से अलग और स्वायत्त हो — केवल NT मुद्दों के लिए।
+      </div>
+
+      <p style="margin-top:20px; font-size:14px; color:#B0906A;">यह कानून भारत के संविधान के अनुच्छेद 13, 14, 19, 21 और UNDRIP अनुच्छेद 3, 4, 13, 18, 26 पर आधारित है।</p>
+    </div>
+  </div>
+
+  <!-- ── खण्ड ६: ५ मुख्य मांगें ── -->
+  <div class="sec">
+    <div class="sec-label">खण्ड ६ · नीति मांगें</div>
+    <h2>संसद और सरकार से ५ मुख्य मांगें</h2>
+
+    <ul class="dl">
+      <li>
+        <div class="dl-num">1</div>
+        <div><strong>संविधान में "Nomadic Tribe (NT)" श्रेणी जोड़ें</strong><br>
+        SC/ST/OBC से अलग — एक चौथी संवैधानिक श्रेणी जो घुमंतू समुदायों की ऐतिहासिक स्वतंत्रता को मान्यता दे।</div>
+      </li>
+      <li>
+        <div class="dl-num">2</div>
+        <div><strong>NST अधिनियम (Nomadic Sahakari Tantra Act) पारित करें</strong><br>
+        ऊपर प्रस्तावित 7 धाराओं पर आधारित स्वतंत्र कानून — Sami Parliament Act और भारत के 6th Schedule की तर्ज पर।</div>
+      </li>
+      <li>
+        <div class="dl-num">3</div>
+        <div><strong>राज्यवार NST सभा का गठन</strong><br>
+        प्रत्येक राज्य में निर्वाचित NST सभा जो थांडा-स्तर से राज्य-स्तर तक काम करे। बजट और प्रशासनिक अधिकार सहित।</div>
+      </li>
+      <li>
+        <div class="dl-num">4</div>
+        <div><strong>गोर-बोली को 8वीं अनुसूची में शामिल करें</strong><br>
+        भाषाई अधिकार के बिना सांस्कृतिक अधिकार अधूरा है। गोर-बोली की डिजिटल और शैक्षणिक उपस्थिति अनिवार्य हो।</div>
+      </li>
+      <li>
+        <div class="dl-num">5</div>
+        <div><strong>CTA 1871 पर संसद में औपचारिक माफी और निवारण प्रस्ताव</strong><br>
+        जैसे कनाडा ने First Nations के साथ किया, जैसे ऑस्ट्रेलिया ने Aboriginal लोगों के साथ किया — भारत को भी CTA 1871 के पीड़ितों से औपचारिक रूप से माफी मांगनी चाहिए।</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ── निष्कर्ष ── -->
+  <div class="sec">
+    <div class="sec-label">निष्कर्ष</div>
+    <h2>"हम भारत के लोग" — इसमें Nomadic Tribe भी है</h2>
+
+    <p>संविधान का वादा था — समानता, स्वतंत्रता, न्याय। लेकिन जब तक बंजारा/DNT पर औपनिवेशिक वर्गीकरण का बोझ है, यह वादा अधूरा है।</p>
+
+    <p>बंजारा को "नीचे उठाने" की जरूरत नहीं — उसे वह दर्जा वापस चाहिए जो उसका था: <strong>स्वतंत्र, स्वायत्त, स्वशासित।</strong></p>
+
+    <div class="pq">
+      बंजारा/DNT को <strong>आरक्षण नहीं</strong> — वह औपनिवेशिक अपमान की निरंतरता है।<br>
+      बंजारा/DNT को <strong>Nomadic Tribe दर्जा</strong> चाहिए — ऐतिहासिक सत्य की मान्यता।<br>
+      बंजारा/DNT को <strong>NST कानून</strong> चाहिए — स्वतंत्र सहकारी शासन का अधिकार।
+    </div>
+  </div>
+
+
+  <!-- समर्थन फार्म -->
+  <div class="sec">
+    <div class="sec-label">समर्थन दें · NST पत्रकार सहकारिता</div>
+    <h2>इस अभियान में अपना समर्थन दर्ज करें</h2>
+    <p>यह फार्म <strong>GBSBFORYOU पत्रकार सहकारिता टेम्पलेट</strong> पर आधारित है। फार्म भरने के बाद आपका डेटा सीधे <strong>NST Sheet</strong> में जमा होगा। यह लिंक आप अपने परिवार, समुदाय, साथी पत्रकारों और सामाजिक कार्यकर्ताओं के साथ share कर सकते हैं।</p>
+    <div style="background:#0F1A14;padding:28px 32px;margin:28px 0;border-left:4px solid #B8902A;">
+      <p style="font-family:'Inter',sans-serif;font-size:12px;color:#B8902A;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">फार्म की विशेषताएं</p>
+      <ul style="list-style:none;font-family:'Inter',sans-serif;font-size:13px;color:#C0B090;line-height:2;">
+        <li>✓ पत्रकार सहकारिता टेम्पलेट — GBSBFORYOU मानक</li>
+        <li>✓ डेटा सीधे NST Sheet में जमा</li>
+        <li>✓ पेशा, राज्य, जिला, समुदाय सहित पूर्ण पंजीकरण</li>
+        <li>✓ 6 NST मांगों पर समर्थन विकल्प</li>
+        <li>✓ सक्रिय सहयोग का विकल्प</li>
+      </ul>
+    </div>
+    <div style="text-align:center; margin:40px 0;">
+      <a href="https://www.cognitoforms.com/gbsbforyoumultipleplatform/nstपतरकरसहकरतnomadictribeसमरथकपजकरण" target="_blank" style="display:inline-block;background:#D4560A;color:#fff;font-family:'Inter',sans-serif;font-size:16px;font-weight:700;letter-spacing:1px;padding:20px 52px;text-decoration:none;border-bottom:4px solid #8B3208;">✊ NST समर्थक पंजीकरण फार्म भरें</a>
+      <p style="margin-top:16px;font-family:'Inter',sans-serif;font-size:12px;color:#888;">GBSBFORYOU Publications · Cognito Forms · NST Sheet</p>
+    </div>
+    <div class="pq" style="font-size:16px;">
+      आपका एक पंजीकरण — बंजारा/DNT समुदाय के <strong>Nomadic Tribe दर्जे</strong> की मांग को संसद और अंतर्राष्ट्रीय मंच तक पहुंचाएगा।
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<footer>
+  <strong>GBSBFORYOU Publications</strong> — भोपाल, मध्यप्रदेश · NST Framework · Ajay Singh Chauhan<br>
+  यह दस्तावेज़ शोध, advocacy, संसदीय प्रस्तुति और अंतर्राष्ट्रीय मंचों के लिए तैयार किया गया है।<br><br>
+  <strong>शोध स्रोत:</strong> IJRAR 2021, Sindh Courier 2022, Countercurrents 2024, ResearchGate 2010, Forward Press 2015, ipleaders.in 2023, ActionAid India, IWGIA, Sami Parliament of Finland, Library of Congress 2021, Debates Indígenas 2026, UN DESA — UNDRIP 2007, Tandfonline — Indigenous Autonomy 2016, Springer Academic Press.<br><br>
+  © 2026 GBSBFORYOU Publications — सर्वाधिकार सुरक्षित
+</footer>
+
+</body>
+</html>
